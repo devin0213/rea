@@ -47,12 +47,15 @@ const expectFittingSdkValidationRecovery = (result: {
       details: {
         operation: "procedure_pseudo_code",
         issues: expect.arrayContaining([
-          {
+          expect.objectContaining({
             path: ["required"],
             reason: "missing_argument",
             expected: "string",
-          },
-          { path: ["unexpected"], reason: "unknown_argument" },
+          }),
+          expect.objectContaining({
+            path: ["unexpected"],
+            reason: "unknown_argument",
+          }),
         ]),
       },
     },

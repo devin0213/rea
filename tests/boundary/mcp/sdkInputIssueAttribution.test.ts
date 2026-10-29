@@ -96,14 +96,162 @@ it("preserves field diagnostics over production stdio and keeps serving", async 
       recovery: { kind: "inspect_input_contract", operation: "read_bytes" },
       details: {
         issues: expect.arrayContaining([
-          { path: ["address"], reason: "invalid_type", expected: "string" },
-          { path: ["length"], reason: "out_of_range", minimum: 1 },
-          { path: ["document"], reason: "invalid_type", expected: "string" },
+          expect.objectContaining({ path: ["address"], reason: "invalid_type", expected: "string" }),
+          expect.objectContaining({ path: ["length"], reason: "out_of_range", minimum: 1 }),
+          expect.objectContaining({ path: ["document"], reason: "invalid_type", expected: "string" }),
         ]),
       },
     },
   });
   await expect(client.ping()).resolves.toBeDefined();
+});
+
+it("retains mixed SDK field diagnostics without repeating custom guidance", async () => {
+  const info = { name: "custom-issues", version: "1" };
+  const server = new EvidenceMcpServer(
+    info,
+    { capabilities: {} },
+    undefined,
+    createToolResultDelivery(4096),
+  );
+  const inputSchema = z.strictObject({
+    first: z.string().regex(/^a$/u, "first correction"),
+    second: z.string().regex(/^b$/u, "second correction"),
+    count: z.number(),
+  });
+  server.registerTool("custom_issues", { inputSchema }, async () => ({
+    content: [{ type: "text", text: "unexpected dispatch" }],
+  }));
+  const client = new Client(info);
+  const [clientTransport, serverTransport] =
+    InMemoryTransport.createLinkedPair();
+  try {
+    await server.connect(serverTransport);
+    await client.connect(clientTransport);
+    const argumentsValue = {
+      first: "wrong",
+      second: "wrong",
+      count: "wrong",
+      extra: true,
+    };
+    const parsed = inputSchema.safeParse(argumentsValue);
+    if (parsed.success) throw new Error("expected invalid input");
+    const countIssue = parsed.error.issues.find(
+      (issue) => issue.path[0] === "count",
+    );
+    if (countIssue === undefined) throw new Error("missing count issue");
+    const unknownIssue = parsed.error.issues.find(
+      (issue) => issue.code === "unrecognized_keys",
+    );
+    if (unknownIssue === undefined)
+      throw new Error("missing unknown-key issue");
+    const result = await client.callTool({
+      name: "custom_issues",
+      arguments: argumentsValue,
+    });
+    const error = parseMcpToolError(result).error;
+    expect(error.details).toMatchObject({
+      issues: [
+        {
+          path: ["first"],
+          reason: "invalid_format",
+          message: "first correction",
+        },
+        {
+          path: ["second"],
+          reason: "invalid_format",
+          message: "second correction",
+        },
+        {
+          path: ["count"],
+          reason: "invalid_type",
+          expected: "number",
+          message: countIssue.message,
+        },
+        { path: ["extra"], reason: "unknown_argument" },
+      ],
+    });
+    const text = JSON.stringify(error);
+    expect(text.split("first correction")).toHaveLength(2);
+    expect(text.split("second correction")).toHaveLength(2);
+    expect(error.message.split(unknownIssue.message)).toHaveLength(2);
+  } finally {
+    await client.close();
+    await server.close();
+  }
+});
+
+it("keeps same-path union and independent issues attributed to their producers", async () => {
+  const info = { name: "issue-producer", version: "1" };
+  const server = new EvidenceMcpServer(
+    info,
+    { capabilities: {} },
+    undefined,
+    createToolResultDelivery(4096),
+  );
+  const inputSchema = z.intersection(
+    z.object({
+      a: z.union([z.object({ x: z.string() }), z.object({ x: z.number() })]),
+    }),
+    z.object({ a: z.object({ x: z.array(z.string()) }) }),
+  );
+  server.registerTool("overlapping_issues", { inputSchema }, async () => ({
+    content: [{ type: "text", text: "unexpected dispatch" }],
+  }));
+  const client = new Client(info);
+  const [clientTransport, serverTransport] =
+    InMemoryTransport.createLinkedPair();
+  try {
+    await server.connect(serverTransport);
+    await client.connect(clientTransport);
+    const input = { a: { x: false } };
+    const parsed = inputSchema.safeParse(input);
+    if (parsed.success) throw new Error("expected invalid input");
+    const rawArrayIssue = parsed.error.issues.find(
+      (issue) => issue.code === "invalid_type",
+    );
+    if (rawArrayIssue === undefined) throw new Error("missing array issue");
+    const result = await client.callTool({
+      name: "overlapping_issues",
+      arguments: input,
+    });
+    const error = parseMcpToolError(result).error;
+    const issues = z
+      .array(
+        z
+          .object({
+            expected: z.unknown().optional(),
+            message: z.string().optional(),
+          })
+          .passthrough(),
+      )
+      .parse(error.details?.issues);
+    expect(issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          path: ["a", "x"],
+          reason: "invalid_type",
+          expected: "array",
+          message: rawArrayIssue.message,
+        }),
+        expect.objectContaining({
+          path: ["a", "x"],
+          reason: "invalid_type",
+          expected: "string",
+        }),
+        expect.objectContaining({
+          path: ["a", "x"],
+          reason: "invalid_type",
+          expected: "number",
+        }),
+      ]),
+    );
+    const stringIssue = issues.find((issue) => issue.expected === "string");
+    expect(stringIssue?.message).not.toBe(rawArrayIssue.message);
+  } finally {
+    await client.close();
+    await server.close();
+  }
 });
 
 it("discloses when bounded projection cannot retain union branch details", async () => {

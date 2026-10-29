@@ -60,9 +60,25 @@ export const projectInputIssuesWithinBudget = (
   input: unknown,
   budgetBytes: number,
 ): readonly AnalysisInputIssue[] | undefined => {
+  return projectInputIssueGroupsWithinBudget(
+    issues,
+    input,
+    budgetBytes,
+  )?.flat();
+};
+
+/** Retain each projected issue's source through bounded SDK normalization. */
+export const projectInputIssueGroupsWithinBudget = (
+  issues: readonly z.core.$ZodIssue[],
+  input: unknown,
+  budgetBytes: number,
+): readonly (readonly AnalysisInputIssue[])[] | undefined => {
   const budget = { remaining: budgetBytes };
   try {
-    return issues.flatMap((issue) => projectIssue(issue, input, budget));
+    const groups: (readonly AnalysisInputIssue[])[] = [];
+    for (const issue of issues)
+      groups.push(projectIssue(issue, input, budget));
+    return groups;
   } catch (error) {
     if (error === projectionBudgetExceeded) return undefined;
     throw error;

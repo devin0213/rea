@@ -41,9 +41,10 @@ import type { EvidenceWriter } from "../application/investigation/InvestigationR
 import {
   AnalysisInputError,
   AnalysisResourceConstraintError,
+  type AnalysisInputIssue,
 } from "../domain/analysisErrorCore.js";
 import { projectAnalysisError } from "../domain/analysisErrorProjection.js";
-import { projectInputIssuesWithinBudget } from "../domain/inputIssueProjection.js";
+import { projectInputIssueGroupsWithinBudget } from "../domain/inputIssueProjection.js";
 import type { z } from "zod";
 import { createEvidence } from "../domain/evidence.js";
 import { jsonObjectSchema, type JsonValue } from "../domain/jsonValue.js";
@@ -132,6 +133,73 @@ const sdkInputValidationDiagnostic = (
   if (!text.startsWith(prefix) || text[prefix.length] !== ":") return undefined;
   const diagnostic = text.slice(prefix.length + 1).trimStart();
   return diagnostic.length === 0 ? undefined : diagnostic;
+};
+
+/** Place an SDK diagnostic at a field only when that same issue produced it. */
+const partitionSdkDiagnostic = (
+  validation: ToolValidationContext["validation"],
+  groups: readonly (readonly AnalysisInputIssue[])[] | undefined,
+  diagnostic: string,
+):
+  | { issues: readonly AnalysisInputIssue[]; remaining: string | undefined }
+  | undefined => {
+  if (
+    validation === undefined ||
+    groups === undefined ||
+    validation.issues.length !== groups.length
+  )
+    return undefined;
+  let offset = 0;
+  const consume = (text: string): boolean => {
+    if (!diagnostic.startsWith(text, offset)) return false;
+    offset += text.length;
+    return true;
+  };
+  const mapped: AnalysisInputIssue[] = [];
+  const remaining: string[] = [];
+  for (let index = 0; index < validation.issues.length; index += 1) {
+    const raw = validation.issues[index];
+    const group = groups[index];
+    if (raw === undefined || group === undefined) return undefined;
+    if (index > 0 && !consume(", ")) return undefined;
+    const start = offset;
+    for (let part = 0; part < raw.path.length; part += 1) {
+      if (part > 0 && !consume(".")) return undefined;
+      if (!consume(String(raw.path[part]))) return undefined;
+    }
+    if (raw.path.length > 0 && !consume(": ")) return undefined;
+    if (!consume(raw.message)) return undefined;
+    const issue = group.length === 1 ? group[0] : undefined;
+    const sameField =
+      issue !== undefined &&
+      raw.path.length === issue.path.length &&
+      raw.path.every((part, i) => part === issue.path[i]);
+    const sameMessage =
+      issue?.message !== undefined && issue.message === raw.message;
+    const direct =
+      raw.code !== "invalid_union" &&
+      raw.code !== "invalid_key" &&
+      raw.code !== "unrecognized_keys";
+    if (
+      sameField &&
+      issue !== undefined &&
+      (sameMessage || (direct && issue.message === undefined))
+    ) {
+      mapped.push(
+        issue.message === undefined
+          ? { ...issue, message: raw.message }
+          : issue,
+      );
+    } else {
+      for (const issue of group) mapped.push(issue);
+      remaining.push(diagnostic.slice(start, offset));
+    }
+  }
+  if (offset !== diagnostic.length) return undefined;
+  return {
+    issues: mapped,
+    remaining: remaining.length === 0 ? undefined : remaining.join(", "),
+  };
 };
 
 /** Replace the tool payload after the SDK codec while retaining its envelope. */
@@ -272,8 +340,7 @@ export class EvidenceMcpServerCore extends RequestTrackingMcpServer {
     return super.registerPrompt(name, config, callback);
   }
   private readonly compactPresentation:
-    | CompactInputSchemaPresentation
-    | undefined;
+    CompactInputSchemaPresentation | undefined;
 
   constructor(
     info: Implementation,
@@ -284,8 +351,7 @@ export class EvidenceMcpServerCore extends RequestTrackingMcpServer {
     private readonly outputSchemaProfile: McpOutputSchemaProfile = "full",
     identity?: ReturnType<typeof createCatalogIdentity>,
     readonly advertisedToolFamilies:
-      | ReadonlySet<string>
-      | undefined = undefined,
+      ReadonlySet<string> | undefined = undefined,
   ) {
     super(info, options);
     this.compactPresentation =
@@ -420,8 +486,7 @@ class ErrorEvidenceTransport implements Transport {
   constructor(
     private readonly transport: Transport,
     private readonly currentEvidenceWriter: () =>
-      | EvidenceWriter["recordEvidence"]
-      | undefined,
+      EvidenceWriter["recordEvidence"] | undefined,
     private readonly currentDelivery: () => ToolResultDelivery,
     private readonly outputSchemaProfile: McpOutputSchemaProfile,
   ) {
@@ -818,16 +883,18 @@ class ErrorEvidenceTransport implements Transport {
       !isCallToolResult(message.result)
     )
       return undefined;
-    const issues =
+    const groups =
       validation === undefined
         ? undefined
-        : projectInputIssuesWithinBudget(
+        : projectInputIssueGroupsWithinBudget(
             validation.issues,
             validation.input,
             this.delivery.resultBudgetBytes,
           );
-    const projectionLimited = validation !== undefined && issues === undefined;
+    const projectionLimited = validation !== undefined && groups === undefined;
     const summary = `The arguments for MCP tool ${tool} do not match its advertised input schema.`;
+    const partitioned = partitionSdkDiagnostic(validation, groups, diagnostic);
+    const issues = partitioned?.issues ?? groups?.flat();
     const error = new AnalysisInputError(
       tool,
       {
@@ -836,7 +903,11 @@ class ErrorEvidenceTransport implements Transport {
             ? projectionLimited
               ? `${summary} Field-level issue projection exceeded its response-derived allowance.`
               : summary
-            : `${summary} ${diagnostic}`,
+            : partitioned !== undefined
+              ? partitioned.remaining === undefined
+                ? summary
+                : `${summary} ${partitioned.remaining}`
+              : `${summary} ${diagnostic}`,
       },
       issues ?? [
         {
