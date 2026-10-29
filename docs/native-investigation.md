@@ -680,7 +680,7 @@ complete observation.
   summary keeps every decoded document and node/edge/coverage counts and
   retains the complete Evidence; page rows with `inspect_analysis_view`
   `view: {kind: "interface-builder", collection: "nodes", document:
-"Contents/Resources/Base.lproj/MainMenu.nib", offset: 0, limit: 64}`.
+  "Contents/Resources/Base.lproj/MainMenu.nib", offset: 0, limit: 64}`.
   `document` selects rows whose evidence names that exact
   `documents[].relative_path` (nodes and edges only); `source_truncated` keeps
   graph incompleteness visible on every page. `verify:interface-builder` compiles
@@ -851,7 +851,11 @@ complete observation.
   and `__objc_catlist` categories are also decoded. Categories record the
   extended class, local or external, plus
   their methods, protocols and properties; category methods appear as
-  implementations with a `category`. Swift field-offset globals that are only
+  implementations with a `category`. A category whose class reference is null,
+  or is bound to a symbol other than `_OBJC_CLASS_$_`, such as the `_$s…CN`
+  metadata symbol of another module's Swift class, keeps a null class, and
+  `objc_properties_categories` coverage names that reference. Swift
+  field-offset globals that are only
   initialized at runtime stay unresolved. Generic, resilient, async and
   coroutine tables, and inherited overrides, have explicit unsupported or
   partial coverage. Other providers retain the
