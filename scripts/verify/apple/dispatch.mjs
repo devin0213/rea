@@ -16,6 +16,7 @@ import {
 } from "../../lib/artifact-e2e.mjs";
 import { nativeDispatchMetadataResultSchema } from "../../../dist/domain/native/objcSwiftMetadata.js";
 import { analysisErrorProjectionSchema } from "../../../dist/contracts/errorSchemas.js";
+import { cliOperationFailurePayload } from "../../../dist/cliLogging.js";
 import { requireMcpToolError } from "../../lib/mcp-verifier-results.mjs";
 
 if (process.platform !== "darwin")
@@ -388,7 +389,7 @@ try {
     } catch (cause) {
       assert.equal(cause.code, 1);
       cliFailure = analysisErrorProjectionSchema.parse(
-        JSON.parse(cause.stdout),
+        cliOperationFailurePayload(JSON.parse(cause.stdout)),
       );
     }
     assert.equal(cliFailure.code, "unsupported_target");
