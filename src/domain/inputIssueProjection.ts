@@ -76,8 +76,7 @@ export const projectInputIssueGroupsWithinBudget = (
   const budget = { remaining: budgetBytes };
   try {
     const groups: (readonly AnalysisInputIssue[])[] = [];
-    for (const issue of issues)
-      groups.push(projectIssue(issue, input, budget));
+    for (const issue of issues) groups.push(projectIssue(issue, input, budget));
     return groups;
   } catch (error) {
     if (error === projectionBudgetExceeded) return undefined;

@@ -96,9 +96,21 @@ it("preserves field diagnostics over production stdio and keeps serving", async 
       recovery: { kind: "inspect_input_contract", operation: "read_bytes" },
       details: {
         issues: expect.arrayContaining([
-          expect.objectContaining({ path: ["address"], reason: "invalid_type", expected: "string" }),
-          expect.objectContaining({ path: ["length"], reason: "out_of_range", minimum: 1 }),
-          expect.objectContaining({ path: ["document"], reason: "invalid_type", expected: "string" }),
+          expect.objectContaining({
+            path: ["address"],
+            reason: "invalid_type",
+            expected: "string",
+          }),
+          expect.objectContaining({
+            path: ["length"],
+            reason: "out_of_range",
+            minimum: 1,
+          }),
+          expect.objectContaining({
+            path: ["document"],
+            reason: "invalid_type",
+            expected: "string",
+          }),
         ]),
       },
     },

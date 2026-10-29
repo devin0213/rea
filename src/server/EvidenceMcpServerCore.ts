@@ -340,7 +340,8 @@ export class EvidenceMcpServerCore extends RequestTrackingMcpServer {
     return super.registerPrompt(name, config, callback);
   }
   private readonly compactPresentation:
-    CompactInputSchemaPresentation | undefined;
+    | CompactInputSchemaPresentation
+    | undefined;
 
   constructor(
     info: Implementation,
@@ -351,7 +352,8 @@ export class EvidenceMcpServerCore extends RequestTrackingMcpServer {
     private readonly outputSchemaProfile: McpOutputSchemaProfile = "full",
     identity?: ReturnType<typeof createCatalogIdentity>,
     readonly advertisedToolFamilies:
-      ReadonlySet<string> | undefined = undefined,
+      | ReadonlySet<string>
+      | undefined = undefined,
   ) {
     super(info, options);
     this.compactPresentation =
@@ -486,7 +488,8 @@ class ErrorEvidenceTransport implements Transport {
   constructor(
     private readonly transport: Transport,
     private readonly currentEvidenceWriter: () =>
-      EvidenceWriter["recordEvidence"] | undefined,
+      | EvidenceWriter["recordEvidence"]
+      | undefined,
     private readonly currentDelivery: () => ToolResultDelivery,
     private readonly outputSchemaProfile: McpOutputSchemaProfile,
   ) {
