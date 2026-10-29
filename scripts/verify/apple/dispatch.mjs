@@ -382,6 +382,11 @@ try {
     bytes.writeUInt32LE(512, 152);
     const path = join(root, `malformed-${section}.macho`);
     await writeFile(path, bytes);
+    const target = await parseBinaryTarget(path);
+    assert.ok(
+      target.ok,
+      "Malformed section fixture must pass target admission",
+    );
     let cliFailure;
     try {
       await artifactCliEvidence("inspect-native-dispatch-metadata", path);
@@ -396,7 +401,7 @@ try {
     assert.equal(cliFailure.category, "unsupported_target");
     assert.deepEqual(cliFailure.details, {
       operation: "inspect_native_dispatch_metadata",
-      path,
+      path: target.value.path,
       reason,
     });
     await withArtifactMcp(path, async (client) => {
