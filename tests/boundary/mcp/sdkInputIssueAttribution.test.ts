@@ -1,4 +1,5 @@
 import { Client, InMemoryTransport } from "@modelcontextprotocol/client";
+import { McpServer } from "@modelcontextprotocol/server";
 import { expect, it } from "vitest";
 import { z } from "zod";
 import { createServer } from "../../../src/server/createServer.js";
@@ -40,11 +41,11 @@ it("keeps concurrent SDK validation issues attached to their own tool call", asy
       error: {
         code: "invalid_request",
         details: {
-          issues: expect.arrayContaining([
+          issues: [
             { path: ["address"], reason: "invalid_type", expected: "string" },
             { path: ["length"], reason: "out_of_range", minimum: 1 },
             { path: ["document"], reason: "invalid_type", expected: "string" },
-          ]),
+          ],
         },
       },
     });
@@ -52,11 +53,11 @@ it("keeps concurrent SDK validation issues attached to their own tool call", asy
       error: {
         code: "invalid_request",
         details: {
-          issues: expect.arrayContaining([
+          issues: [
             { path: ["pattern"], reason: "invalid_type", expected: "string" },
             { path: ["limit"], reason: "out_of_range", minimum: 1 },
             { path: ["cursor"], reason: "invalid_type", expected: "string" },
-          ]),
+          ],
         },
       },
     });
@@ -64,13 +65,13 @@ it("keeps concurrent SDK validation issues attached to their own tool call", asy
       error: {
         code: "invalid_request",
         details: {
-          issues: expect.arrayContaining([
+          issues: [
             {
               path: ["address"],
               reason: "missing_argument",
               expected: "string",
             },
-          ]),
+          ],
         },
       },
     });
@@ -120,21 +121,45 @@ it("discloses when bounded projection cannot retain union branch details", async
   const second = branches[1];
   if (first === undefined || second === undefined)
     throw new Error("missing branches");
-  server.registerTool(
-    "bounded_issues",
-    {
-      inputSchema: z.object({
-        value: z.union([first, second, ...branches.slice(2)]),
-      }),
-    },
-    async () => ({ content: [{ type: "text", text: "unexpected dispatch" }] }),
-  );
+  const inputSchema = z.object({
+    value: z.union([first, second, ...branches.slice(2)]),
+  });
+  server.registerTool("bounded_issues", { inputSchema }, async () => ({
+    content: [{ type: "text", text: "unexpected dispatch" }],
+  }));
+  const sdkServer = new McpServer(info);
+  sdkServer.registerTool("bounded_issues", { inputSchema }, async () => ({
+    content: [{ type: "text", text: "unexpected dispatch" }],
+  }));
+  const keySchema = z.strictObject({});
+  const unreachable = async () => ({
+    content: [{ type: "text" as const, text: "unexpected dispatch" }],
+  });
+  server.registerTool("long_key", { inputSchema: keySchema }, unreachable);
+  sdkServer.registerTool("long_key", { inputSchema: keySchema }, unreachable);
   const client = new Client(info);
+  const sdkClient = new Client(info);
   const [clientTransport, serverTransport] =
+    InMemoryTransport.createLinkedPair();
+  const [sdkClientTransport, sdkServerTransport] =
     InMemoryTransport.createLinkedPair();
   try {
     await server.connect(serverTransport);
     await client.connect(clientTransport);
+    await sdkServer.connect(sdkServerTransport);
+    await sdkClient.connect(sdkClientTransport);
+    const sdkResult = await sdkClient.callTool({
+      name: "bounded_issues",
+      arguments: { value: {} },
+    });
+    const sdkText = sdkResult.content.find(
+      (item) => item.type === "text",
+    )?.text;
+    const prefix =
+      "Input validation error: Invalid arguments for tool bounded_issues: ";
+    expect(sdkText?.startsWith(prefix)).toBe(true);
+    const diagnostic = sdkText?.slice(prefix.length);
+    expect(diagnostic).toBeTruthy();
     const result = await client.callTool({
       name: "bounded_issues",
       arguments: { value: {} },
@@ -142,15 +167,55 @@ it("discloses when bounded projection cannot retain union branch details", async
     expect(parseMcpToolError(result)).toMatchObject({
       error: {
         code: "invalid_request",
-        message: expect.stringContaining(
-          "Field-level issue projection exceeded its response-derived allowance",
-        ),
-        details: { issues: [{ path: [], reason: "invalid_value" }] },
+        details: {
+          issues: [
+            {
+              path: [],
+              reason: "invalid_value",
+              message: diagnostic,
+              observed: { field_details: "omitted" },
+            },
+          ],
+        },
       },
     });
+    const argumentsWithLongKey = { [`key_${"x".repeat(1600)}`]: true };
+    const sdkLongKey = await sdkClient.callTool({
+      name: "long_key",
+      arguments: argumentsWithLongKey,
+    });
+    const sdkLongText = sdkLongKey.content.find(
+      (item) => item.type === "text",
+    )?.text;
+    const keyPrefix =
+      "Input validation error: Invalid arguments for tool long_key: ";
+    expect(sdkLongText?.startsWith(keyPrefix)).toBe(true);
+    const keyDiagnostic = sdkLongText?.slice(keyPrefix.length);
+    expect(keyDiagnostic).toBeTruthy();
+    const longKey = await client.callTool({
+      name: "long_key",
+      arguments: argumentsWithLongKey,
+    });
+    const longKeyError = parseMcpToolError(longKey).error;
+    expect(longKeyError).toMatchObject({
+      code: "invalid_request",
+      details: {
+        issues: [
+          {
+            path: [],
+            reason: "invalid_value",
+            message: keyDiagnostic,
+            observed: { field_details: "omitted" },
+          },
+        ],
+      },
+    });
+    expect(longKeyError.message).not.toContain(keyDiagnostic);
     await expect(client.ping()).resolves.toBeDefined();
   } finally {
     await client.close();
     await server.close();
+    await sdkClient.close();
+    await sdkServer.close();
   }
 });

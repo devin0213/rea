@@ -827,12 +827,27 @@ class ErrorEvidenceTransport implements Transport {
             this.delivery.resultBudgetBytes,
           );
     const projectionLimited = validation !== undefined && issues === undefined;
+    const summary = `The arguments for MCP tool ${tool} do not match its advertised input schema.`;
     const error = new AnalysisInputError(
       tool,
       {
-        userMessage: `The arguments for MCP tool ${tool} do not match its advertised input schema. ${projectionLimited ? "Field-level issue projection exceeded its response-derived allowance; the original diagnostic follows. " : ""}${diagnostic}`,
+        userMessage:
+          issues === undefined
+            ? projectionLimited
+              ? `${summary} Field-level issue projection exceeded its response-derived allowance.`
+              : summary
+            : `${summary} ${diagnostic}`,
       },
-      issues ?? [{ path: [], reason: "invalid_value", message: diagnostic }],
+      issues ?? [
+        {
+          path: [],
+          reason: "invalid_value",
+          message: diagnostic,
+          ...(projectionLimited
+            ? { observed: { field_details: "omitted" } }
+            : {}),
+        },
+      ],
     );
     const result = this.delivery.toErrorToolResult(error, targetContent);
     return {
