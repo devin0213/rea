@@ -93,9 +93,9 @@ exit 1
       expect(output.limitations).toContain(
         "PNG signature, IHDR framing, checksum, and dimensions are validated; encoding and image contents are not validated",
       );
-      expect((await readFile(join(outputPath, "screen.png"))).equals(frame)).toBe(
-        true,
-      );
+      expect(
+        (await readFile(join(outputPath, "screen.png"))).equals(frame),
+      ).toBe(true);
     } else {
       expect(result.exitCode).toBe(1);
       expect(JSON.parse(result.stdout)).toMatchObject({
