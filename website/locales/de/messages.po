@@ -78,7 +78,8 @@ msgstr "Von N0zoM1z0 · 10. Oktober 2026"
 #: website/public/guides/javascript/index.html:520
 #: website/public/guides/native/index.html:520
 #: website/public/guides/rl-environments/index.html:507
-#: website/public/index.html:1312 website/public/showcase/aegis/index.html:817
+#: website/public/index.html:1313 website/public/mcp/index.html:337
+#: website/public/showcase/aegis/index.html:817
 #: website/public/showcase/ctf/index.html:786
 #: website/public/showcase/dx-ball/index.html:794
 #: website/public/showcase/index.html:346
@@ -116,7 +117,8 @@ msgstr ""
 #: website/public/guides/javascript/index.html:116
 #: website/public/guides/native/index.html:116
 #: website/public/guides/rl-environments/index.html:116
-#: website/public/index.html:118 website/public/showcase/aegis/index.html:117
+#: website/public/index.html:118 website/public/mcp/index.html:116
+#: website/public/showcase/aegis/index.html:117
 #: website/public/showcase/ctf/index.html:116
 #: website/public/showcase/dx-ball/index.html:116
 #: website/public/showcase/index.html:116
@@ -139,7 +141,8 @@ msgstr "REA-Startseite"
 #: website/public/guides/javascript/index.html:120
 #: website/public/guides/native/index.html:120
 #: website/public/guides/rl-environments/index.html:120
-#: website/public/index.html:122 website/public/showcase/aegis/index.html:121
+#: website/public/index.html:122 website/public/mcp/index.html:120
+#: website/public/showcase/aegis/index.html:121
 #: website/public/showcase/ctf/index.html:120
 #: website/public/showcase/dx-ball/index.html:120
 #: website/public/showcase/index.html:120
@@ -162,7 +165,8 @@ msgstr "Hauptnavigation"
 #: website/public/guides/javascript/index.html:137
 #: website/public/guides/native/index.html:137
 #: website/public/guides/rl-environments/index.html:137
-#: website/public/index.html:139 website/public/showcase/aegis/index.html:138
+#: website/public/index.html:139 website/public/mcp/index.html:137
+#: website/public/showcase/aegis/index.html:138
 #: website/public/showcase/ctf/index.html:137
 #: website/public/showcase/dx-ball/index.html:137
 #: website/public/showcase/index.html:137
@@ -185,7 +189,8 @@ msgstr "REA auf GitHub"
 #: website/public/guides/javascript/index.html:157
 #: website/public/guides/native/index.html:157
 #: website/public/guides/rl-environments/index.html:157
-#: website/public/index.html:159 website/public/showcase/aegis/index.html:158
+#: website/public/index.html:159 website/public/mcp/index.html:157
+#: website/public/showcase/aegis/index.html:158
 #: website/public/showcase/ctf/index.html:157
 #: website/public/showcase/dx-ball/index.html:157
 #: website/public/showcase/index.html:157
@@ -208,7 +213,8 @@ msgstr "REA auf Discord beitreten"
 #: website/public/guides/javascript/index.html:176
 #: website/public/guides/native/index.html:176
 #: website/public/guides/rl-environments/index.html:176
-#: website/public/index.html:178 website/public/showcase/aegis/index.html:177
+#: website/public/index.html:178 website/public/mcp/index.html:176
+#: website/public/showcase/aegis/index.html:177
 #: website/public/showcase/ctf/index.html:176
 #: website/public/showcase/dx-ball/index.html:176
 #: website/public/showcase/index.html:176
@@ -5632,20 +5638,20 @@ msgctxt "page:index.html"
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: website/public/index.html:312 website/public/index.html:325
-#: website/public/index.html:323
+#: website/public/index.html:313 website/public/index.html:326
+#: website/public/index.html:324
 msgctxt "page:index.html"
 msgid "On this page"
 msgstr "Auf dieser Seite"
 
-#: website/public/index.html:218 website/public/index.html:313
+#: website/public/index.html:219 website/public/index.html:314
 msgctxt "page:index.html"
 msgid "Set up REA"
 msgstr "Einrichten von REA"
 
 #. {ph0}: <a href="#setup" aria-current="location">
 #. {ph1}: </a>
-#: website/public/index.html:327
+#: website/public/index.html:328
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Set up REA{ph1}"
@@ -5653,7 +5659,7 @@ msgstr "{ph0}Einrichten von REA {ph1}"
 
 #. {ph0}: <a href="#dinosaur">
 #. {ph1}: </a>
-#: website/public/index.html:329
+#: website/public/index.html:330
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Dinosaur game{ph1}"
@@ -5661,7 +5667,7 @@ msgstr "{ph0}Dinosaurier-Spiel{ph1}"
 
 #. {ph0}: <a href="#calculator">
 #. {ph1}: </a>
-#: website/public/index.html:330
+#: website/public/index.html:331
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Calculator{ph1}"
@@ -5669,7 +5675,7 @@ msgstr "{ph0}Rechner{ph1}"
 
 #. {ph0}: <a href="#try-rea">
 #. {ph1}: </a>
-#: website/public/index.html:333
+#: website/public/index.html:334
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Try REA{ph1}"
@@ -5677,7 +5683,7 @@ msgstr "{ph0}Probieren Sie REA aus {ph1}"
 
 #. {ph0}: <a href="#analyze">
 #. {ph1}: </a>
-#: website/public/index.html:334
+#: website/public/index.html:335
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Go deeper{ph1}"
@@ -5695,7 +5701,7 @@ msgctxt "page:index.html"
 msgid "Find out how{ph0}software works."
 msgstr "Finde heraus,{ph0}wie Software funktioniert."
 
-#: website/public/index.html:219
+#: website/public/index.html:220
 msgctxt "page:index.html"
 msgid "Copy this into your coding agent:"
 msgstr "Kopiere diesen Prompt in deinen Coding-Agent:"
@@ -5708,26 +5714,26 @@ msgstr "Kopiere diesen Prompt in deinen Coding-Agent:"
 #. {ph5}: <i>
 #. {ph6}: </i>
 #. {ph7}: </span >
-#: website/public/index.html:222 website/public/index.html:1127
+#: website/public/index.html:223 website/public/index.html:1128
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}{ph1}{ph2}{ph3}{ph4}{ph5}{ph6}{ph7}Your coding agent"
 msgstr "{ph0}{ph1}{ph2}{ph3}{ph4}{ph5}{ph6}{ph7}Ihr Codierungsagent"
 
-#: website/public/index.html:227 website/public/index.html:251
-#: website/public/index.html:539 website/public/index.html:620
-#: website/public/index.html:844 website/public/index.html:1131
-#: website/public/index.html:1218 website/public/index.html:1246
+#: website/public/index.html:228 website/public/index.html:252
+#: website/public/index.html:540 website/public/index.html:621
+#: website/public/index.html:845 website/public/index.html:1132
+#: website/public/index.html:1219 website/public/index.html:1247
 msgctxt "page:index.html"
 msgid "Copy"
 msgstr "Kopieren"
 
-#: website/public/index.html:248
+#: website/public/index.html:249
 msgctxt "page:index.html"
 msgid "Or run this in your terminal:"
 msgstr "Oder führe diesen Befehl im Terminal aus:"
 
-#: website/public/index.html:260
+#: website/public/index.html:261
 msgctxt "page:index.html"
 msgid "Approve the setup plan, then restart your agent."
 msgstr ""
@@ -5736,7 +5742,7 @@ msgstr ""
 
 #. {ph0}: <span>
 #. {ph1}: </span>
-#: website/public/index.html:388
+#: website/public/index.html:389
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}01{ph1} Decode branches"
@@ -5744,7 +5750,7 @@ msgstr "{ph0}01{ph1} Zweige dekodieren"
 
 #. {ph0}: <span>
 #. {ph1}: </span>
-#: website/public/index.html:396
+#: website/public/index.html:397
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}02{ph1} Trace calls"
@@ -5752,7 +5758,7 @@ msgstr "{ph0}02{ph1} Anrufe verfolgen"
 
 #. {ph0}: <span>
 #. {ph1}: </span>
-#: website/public/index.html:404
+#: website/public/index.html:405
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}03{ph1} Recover the rule"
@@ -5762,20 +5768,20 @@ msgstr "{ph0}03{ph1} Wiederherstellen der Regel"
 #. {ph1}: </span>
 #. {ph2}: <span class="assembly-disclosure" aria-hidden="true" >
 #. {ph3}: </span>
-#: website/public/index.html:415
+#: website/public/index.html:416
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Original x64 · selected instructions{ph1} {ph2}{ph3}"
 msgstr "{ph0}Original x64 * ausgewählte Anleitung{ph1} {ph2}{ph3}"
 
-#: website/public/index.html:457
+#: website/public/index.html:458
 msgctxt "page:index.html"
 msgid "01 · Which branch?"
 msgstr "01 * Welche Branche?"
 
 #. {ph0}: <strong>
 #. {ph1}: </strong>
-#: website/public/index.html:458
+#: website/public/index.html:459
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -5785,29 +5791,29 @@ msgstr ""
 "“{ph0}0x5b? 0x5 Grad?{ph1} Zwei Sprünge an die gleiche Stelle. Welche "
 "Betreiber sind das?”"
 
-#: website/public/index.html:462
+#: website/public/index.html:463
 msgctxt "page:index.html"
 msgid "Look up the command IDs, then label the branch."
 msgstr "Suchen Sie nach den Befehls-IDs und beschriften Sie den Zweig."
 
-#: website/public/index.html:468
+#: website/public/index.html:469
 msgctxt "page:index.html"
 msgid "Divide ÷"
 msgstr "Teilen ÷"
 
-#: website/public/index.html:472
+#: website/public/index.html:473
 msgctxt "page:index.html"
 msgid "Multiply ×"
 msgstr "Multiplizieren ×"
 
-#: website/public/index.html:477
+#: website/public/index.html:478
 msgctxt "page:index.html"
 msgid "02 · What do the calls do?"
 msgstr "02 · Was machen die aufgerufenen Funktionen?"
 
 #. {ph0}: <strong >
 #. {ph1}: </strong >
-#: website/public/index.html:478
+#: website/public/index.html:479
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -5817,26 +5823,26 @@ msgstr ""
 "“100 ist klar. Die Anrufe sind nur Adressen. {ph0}Welcher teilt sich? "
 "Welcher Wert geht ein?{ph1}”"
 
-#: website/public/index.html:484
+#: website/public/index.html:485
 msgctxt "page:index.html"
 msgid "Inspect the helpers and trace the stored values."
 msgstr ""
 "Überprüfen Sie die Hilfsfunktionen und verfolgen Sie die gespeicherten "
 "Werte."
 
-#: website/public/index.html:494
+#: website/public/index.html:495
 msgctxt "page:index.html"
 msgid "Divide"
 msgstr "Teilen"
 
-#: website/public/index.html:499
+#: website/public/index.html:500
 msgctxt "page:index.html"
 msgid "03 · What is the rule?"
 msgstr "03 · Was ist die Regel?"
 
 #. {ph0}: <strong>
 #. {ph1}: </strong>
-#: website/public/index.html:500
+#: website/public/index.html:501
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -5846,19 +5852,19 @@ msgstr ""
 "“Dieser Pfad multipliziert sich mit der anderen Eingabe. So {ph0}10% "
 "bedeutet 10% von 200{ph1} nach +.”"
 
-#: website/public/index.html:504
+#: website/public/index.html:505
 msgctxt "page:index.html"
 msgid "Name the operands and check both operator paths."
 msgstr "Benennen Sie die Operanden und überprüfen Sie beide Operatorpfade."
 
-#: website/public/index.html:520 website/public/index.html:447
+#: website/public/index.html:521 website/public/index.html:448
 msgctxt "page:index.html"
 msgid "Illustrative expert reasoning"
 msgstr "Anschauliche Argumentation von Experten"
 
 #. {ph0}: <strong >
 #. {ph1}: </strong >
-#: website/public/index.html:523
+#: website/public/index.html:524
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -5876,7 +5882,7 @@ msgstr ""
 #. {ph5}: <i>
 #. {ph6}: </i>
 #. {ph7}: </span >
-#: website/public/index.html:534
+#: website/public/index.html:535
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}{ph1}{ph2}{ph3}{ph4}{ph5}{ph6}{ph7}Example prompt · Calculator"
@@ -5884,83 +5890,83 @@ msgstr ""
 "{ph0}{ph1}{ph2}{ph3}{ph4}{ph5}{ph6}{ph7}Beispiel Eingabeaufforderung * "
 "Rechner"
 
-#: website/public/index.html:556
+#: website/public/index.html:557
 msgctxt "page:index.html"
 msgid "Example answer · based on the findings"
 msgstr "Beispielantwort * basierend auf den Ergebnissen"
 
 #. {ph0}: <strong>
 #. {ph1}: </strong>
-#: website/public/index.html:559
+#: website/public/index.html:560
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
 "After +, the % button takes {ph0}a percentage of the first number.{ph1}"
 msgstr "Nach + nimmt die% -Taste {ph0}ein Prozentsatz der ersten Zahl.{ph1}"
 
-#: website/public/index.html:572
+#: website/public/index.html:573
 msgctxt "page:index.html"
 msgid "REA supplies"
 msgstr "REA liefert"
 
-#: website/public/index.html:573
+#: website/public/index.html:574
 msgctxt "page:index.html"
 msgid "The handler’s instructions, decompiled code and calls."
 msgstr "Die Anweisungen des Handlers, dekompilierter Code und Aufrufe."
 
-#: website/public/index.html:578
+#: website/public/index.html:579
 msgctxt "page:index.html"
 msgid "Your agent explains"
 msgstr "Dein Agent erklärt"
 
-#: website/public/index.html:579
+#: website/public/index.html:580
 msgctxt "page:index.html"
 msgid "Which branch applies, what it calculates and how to rebuild it."
 msgstr "Welcher Zweig gilt, was er berechnet und wie er neu erstellt wird."
 
-#: website/public/index.html:603
+#: website/public/index.html:604
 msgctxt "page:index.html"
 msgid "Example 01 · Chrome’s dinosaur game"
 msgstr "Beispiel 01 * Dinosaurier-Spiel von Chrome"
 
-#: website/public/index.html:604
+#: website/public/index.html:605
 msgctxt "page:index.html"
 msgid "Why does the dinosaur get faster?"
 msgstr "Warum wird der Dinosaurier schneller?"
 
-#: website/public/index.html:683
+#: website/public/index.html:684
 msgctxt "page:index.html"
 msgid "Play"
 msgstr "Spielen"
 
-#: website/public/index.html:686
+#: website/public/index.html:687
 msgctxt "page:index.html"
 msgid "Jump ↑"
 msgstr "Springen ↑"
 
-#: website/public/index.html:687
+#: website/public/index.html:688
 msgctxt "page:index.html"
 msgid "Restart"
 msgstr "Neustart"
 
-#: website/public/index.html:690
+#: website/public/index.html:691
 msgctxt "page:index.html"
 msgid "Speed"
 msgstr "Geschwindigkeit"
 
-#: website/public/index.html:700
+#: website/public/index.html:701
 msgctxt "page:index.html"
 msgid "Use the recovered acceleration rule"
 msgstr "Verwenden Sie die wiederhergestellte Beschleunigungsregel"
 
-#: website/public/index.html:704
+#: website/public/index.html:705
 msgctxt "page:index.html"
 msgid "Original rule: start at 6, then increase toward 13."
 msgstr ""
 "Ursprüngliche Regel: Beginnen Sie bei 6 und erhöhen Sie sich dann in "
 "Richtung 13."
 
-#: website/public/index.html:707
+#: website/public/index.html:708
 msgctxt "page:index.html"
 msgid "Move the slider to set your own speed. Space or Jump clears a cactus."
 msgstr ""
@@ -5973,7 +5979,7 @@ msgstr ""
 #. {ph3}: </span >
 #. {ph4}: <span class="terminal-cursor" aria-hidden="true">
 #. {ph5}: </span>
-#: website/public/index.html:629
+#: website/public/index.html:630
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -5988,7 +5994,7 @@ msgstr ""
 
 #. {ph0}: <a href="https://wayou.github.io/t-rex-runner/" >
 #. {ph1}: </a >
-#: website/public/index.html:727
+#: website/public/index.html:728
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "Inspected target: {ph0}wayou’s Chromium-derived browser edition{ph1}."
@@ -5996,12 +6002,12 @@ msgstr ""
 "Untersuchtes Ziel: {ph0}wayous von Chromium abgeleitete Browser-"
 "Edition{ph1}."
 
-#: website/public/index.html:718
+#: website/public/index.html:719
 msgctxt "page:index.html"
 msgid "Open the speed lab →"
 msgstr "Öffnen Sie das Geschwindigkeitslabor →"
 
-#: website/public/index.html:749
+#: website/public/index.html:750
 msgctxt "page:index.html"
 msgid "What each part does"
 msgstr "Was jeder Teil tut"
@@ -6012,7 +6018,7 @@ msgstr "Was jeder Teil tut"
 #. {ph3}: </span >
 #. {ph4}: <span class="flow-note" >
 #. {ph5}: </span >
-#: website/public/index.html:751
+#: website/public/index.html:752
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -6029,7 +6035,7 @@ msgstr ""
 #. {ph3}: </span >
 #. {ph4}: <span class="flow-note" >
 #. {ph5}: </span >
-#: website/public/index.html:758
+#: website/public/index.html:759
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -6046,7 +6052,7 @@ msgstr ""
 #. {ph3}: </span >
 #. {ph4}: <span class="flow-note" >
 #. {ph5}: </span >
-#: website/public/index.html:766
+#: website/public/index.html:767
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -6057,7 +6063,7 @@ msgstr ""
 "Sie{ph3}{ph4}Probieren Sie die ursprüngliche Beschleunigung aus und wählen "
 "Sie dann Ihr eigenes Tempo.{ph5}"
 
-#: website/public/index.html:724
+#: website/public/index.html:725
 msgctxt "page:index.html"
 msgid "See the script, checks and how to try the analysis"
 msgstr ""
@@ -6065,7 +6071,7 @@ msgstr ""
 "Analyse an"
 
 #. {ph0}: <code>index.js</code>
-#: website/public/index.html:776
+#: website/public/index.html:777
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -6076,7 +6082,7 @@ msgstr ""
 "Verbindung und gab das geladene zurück {ph0}, einschließlich seiner Quelle "
 "und Verdauung."
 
-#: website/public/index.html:789
+#: website/public/index.html:790
 msgctxt "page:index.html"
 msgid ""
 "We called the original game’s update function in a controlled browser check,"
@@ -6091,7 +6097,7 @@ msgstr ""
 
 #. {ph0}: <a href="examples/dino-lab/">
 #. {ph1}: </a>
-#: website/public/index.html:795
+#: website/public/index.html:796
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -6108,7 +6114,7 @@ msgstr ""
 #. {ph1}: </a>
 #. {ph2}: <a href="https://wayou.github.io/t-rex-runner/" >
 #. {ph3}: </a >
-#: website/public/index.html:801
+#: website/public/index.html:802
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -6126,7 +6132,7 @@ msgstr ""
 #. {ph1}: </a >
 #. {ph2}: <a href="assets/licenses/dinosaur.txt" >
 #. {ph3}: </a >
-#: website/public/index.html:810
+#: website/public/index.html:811
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -6135,34 +6141,34 @@ msgstr ""
 "{ph0}Geprüfter Geschwindigkeitscode{ph1} · {ph2} Chromium Autoren * BSD-"
 "Lizenz{ph3}"
 
-#: website/public/index.html:827
+#: website/public/index.html:828
 msgctxt "page:index.html"
 msgid "Example 02 · Windows Calculator"
 msgstr "Beispiel 02 * Windows Rechner"
 
-#: website/public/index.html:828
+#: website/public/index.html:829
 msgctxt "page:index.html"
 msgid "Rebuild Calculator’s % button."
 msgstr "Die %-Taste des Rechners nachbauen."
 
-#: website/public/index.html:933
+#: website/public/index.html:934
 msgctxt "page:index.html"
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: website/public/index.html:941
+#: website/public/index.html:942
 msgctxt "page:index.html"
 msgid "10% of 200 = 20. Then 200 + 20 = 220."
 msgstr "10% von 200 = 20. Dann ist 200 + 20 = 220."
 
-#: website/public/index.html:944
+#: website/public/index.html:945
 msgctxt "page:index.html"
 msgid "Interactive illustration of the inspected percentage rule."
 msgstr "Interaktive Darstellung der geprüften Prozentregel."
 
 #. {ph0}: <code>previous = 200</code>
 #. {ph1}: <code>current = 10</code>
-#: website/public/index.html:952
+#: website/public/index.html:953
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "For this example, {ph0} and {ph1}."
@@ -6174,7 +6180,7 @@ msgstr "Für dieses Beispiel, {ph0} und {ph1}."
 #. {ph3}: </span >
 #. {ph4}: <span class="terminal-cursor" aria-hidden="true">
 #. {ph5}: </span>
-#: website/public/index.html:853
+#: website/public/index.html:854
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -6187,7 +6193,7 @@ msgstr ""
 "erstellen Sie dann einen kleinen Taschenrechner, der beide "
 "verwendet.{ph3}{ph4}{ph5}"
 
-#: website/public/index.html:869
+#: website/public/index.html:870
 msgctxt "page:index.html"
 msgid "With +"
 msgstr "Mit +"
@@ -6195,13 +6201,13 @@ msgstr "Mit +"
 #. {ph0}: <span>
 #. {ph1}: </span >
 #. {ph2}: <code>10% of 200 = 20 → 200 + 20 = 220</code>
-#: website/public/index.html:870
+#: website/public/index.html:871
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Take 10% of the first number.{ph1}{ph2}"
 msgstr "{ph0}Nimm 10% der ersten Zahl.{ph1}{ph2}"
 
-#: website/public/index.html:876
+#: website/public/index.html:877
 msgctxt "page:index.html"
 msgid "With ×"
 msgstr "Mit ×"
@@ -6209,13 +6215,13 @@ msgstr "Mit ×"
 #. {ph0}: <span>
 #. {ph1}: </span>
 #. {ph2}: <code>200 × 0.1 = 20</code>
-#: website/public/index.html:877
+#: website/public/index.html:878
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Turn 10% into 0.1.{ph1}{ph2}"
 msgstr "{ph0}Verwandle 10% in 0,1.{ph1}{ph2}"
 
-#: website/public/index.html:967
+#: website/public/index.html:968
 msgctxt "page:index.html"
 msgid "From the installed app to a working % button"
 msgstr "Von der installierten App zu einer funktionierenden% -Schaltfläche"
@@ -6227,7 +6233,7 @@ msgstr "Von der installierten App zu einer funktionierenden% -Schaltfläche"
 #. {ph4}: <span class="flow-note" >
 #. {ph5}: <code>100</code>
 #. {ph6}: </span >
-#: website/public/index.html:980
+#: website/public/index.html:981
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -6245,7 +6251,7 @@ msgstr ""
 #. {ph3}: </span >
 #. {ph4}: <span class="flow-note" >
 #. {ph5}: </span >
-#: website/public/index.html:988
+#: website/public/index.html:989
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -6257,12 +6263,12 @@ msgstr ""
 " die Regeln{ph3}{ph4}Überprüfen Sie den Zweig mit der Quelle von Microsoft "
 "und versuchen Sie dann oben + und ×.{ph5}"
 
-#: website/public/index.html:951
+#: website/public/index.html:952
 msgctxt "page:index.html"
 msgid "See the real code and how the answer was checked"
 msgstr "Sehen Sie sich den echten Code an und wie die Antwort überprüft wurde"
 
-#: website/public/index.html:1023
+#: website/public/index.html:1024
 msgctxt "page:index.html"
 msgid ""
 "Inspected with REA 4.1.0: Windows Calculator 11.2508.4.0, x64. The readable "
@@ -6283,7 +6289,7 @@ msgstr ""
 #. {ph3}: </a >
 #. {ph4}: <a href="guides/native/">
 #. {ph5}: </a>
-#: website/public/index.html:1028
+#: website/public/index.html:1029
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -6293,17 +6299,17 @@ msgstr ""
 "{ph0}Prozentuale Umsetzung{ph1} · {ph2}Testfälle von Microsoft{ph3} · "
 "{ph4}Anleitung zur nativen Einrichtung{ph5}"
 
-#: website/public/index.html:1162
+#: website/public/index.html:1163
 msgctxt "page:index.html"
 msgid "Your first investigation"
 msgstr "Ihre erste Untersuchung"
 
-#: website/public/index.html:1163
+#: website/public/index.html:1164
 msgctxt "page:index.html"
 msgid "Try REA on a small app."
 msgstr "Probieren Sie REA mit einer kleinen App aus."
 
-#: website/public/index.html:1164
+#: website/public/index.html:1165
 msgctxt "page:index.html"
 msgid ""
 "Download our Notes example, trace its CSV export, and check one changed "
@@ -6312,17 +6318,17 @@ msgstr ""
 "Laden Sie unser Notizbeispiel herunter, verfolgen Sie den Export von CSV und"
 " überprüfen Sie eine geänderte Eingabe."
 
-#: website/public/index.html:1169
+#: website/public/index.html:1170
 msgctxt "page:index.html"
 msgid "Try the guided example"
 msgstr "Probieren Sie das geführte Beispiel aus"
 
-#: website/public/index.html:1186
+#: website/public/index.html:1187
 msgctxt "page:index.html"
 msgid "Native binaries"
 msgstr "Maschinencode-Programme"
 
-#: website/public/index.html:1187
+#: website/public/index.html:1188
 msgctxt "page:index.html"
 msgid ""
 "Inspect functions, strings, references and call relationships in executables"
@@ -6331,27 +6337,27 @@ msgstr ""
 "Überprüfen Sie Funktionen, Zeichenfolgen, Referenzen und "
 "Funktionsaufrufbeziehungen in ausführbaren Dateien und Bibliotheken."
 
-#: website/public/index.html:1191
+#: website/public/index.html:1192
 msgctxt "page:index.html"
 msgid "Native analysis guide"
 msgstr "Handbuch zur Analyse von Maschinencode-Programmen"
 
-#: website/public/index.html:1194
+#: website/public/index.html:1195
 msgctxt "page:index.html"
 msgid "JavaScript & Electron"
 msgstr "Modell: JavaScript und Electron"
 
-#: website/public/index.html:1196
+#: website/public/index.html:1197
 msgctxt "page:index.html"
 msgid "Application workflows"
 msgstr "Anwendungs-Workflows"
 
-#: website/public/index.html:1199
+#: website/public/index.html:1200
 msgctxt "page:index.html"
 msgid "Browser & runtime activity"
 msgstr "Browser- & Laufzeit-Aktivität"
 
-#: website/public/index.html:1200
+#: website/public/index.html:1201
 msgctxt "page:index.html"
 msgid ""
 "Capture selected browser or process activity, then compare the results "
@@ -6360,12 +6366,12 @@ msgstr ""
 "Erfassen Sie ausgewählte Browser- oder Prozessaktivitäten und vergleichen "
 "Sie dann die Ergebnisse über Läufe hinweg."
 
-#: website/public/index.html:1204
+#: website/public/index.html:1205
 msgctxt "page:index.html"
 msgid "Browser observation guide"
 msgstr "Anleitung zur Browserbeobachtung"
 
-#: website/public/index.html:1275
+#: website/public/index.html:1276
 msgctxt "page:index.html"
 msgid "Any questions?"
 msgstr "Noch Fragen?"
@@ -6380,27 +6386,27 @@ msgstr ""
 "Codierungsagenten. Befolgen Sie klare Anleitungen und probieren Sie "
 "interaktive Beispiele mit REA aus."
 
-#: website/public/index.html:227
+#: website/public/index.html:228
 msgctxt "page:index.html"
 msgid "Copy REA installation prompt"
 msgstr "Installationsaufforderung für REA kopieren"
 
-#: website/public/index.html:251
+#: website/public/index.html:252
 msgctxt "page:index.html"
 msgid "Copy setup command"
 msgstr "Setup-Befehl kopieren"
 
-#: website/public/index.html:383
+#: website/public/index.html:384
 msgctxt "page:index.html"
 msgid "Follow the manual Calculator analysis"
 msgstr "Befolgen Sie die manuelle Taschenrechneranalyse"
 
-#: website/public/index.html:539
+#: website/public/index.html:540
 msgctxt "page:index.html"
 msgid "Copy Calculator percentage question"
 msgstr "Kopierrechner Prozentfrage"
 
-#: website/public/index.html:673
+#: website/public/index.html:674
 msgctxt "page:index.html"
 msgid ""
 "Dinosaur mini-game. Use the Jump button or press Space while the game is "
@@ -6409,22 +6415,22 @@ msgstr ""
 "Dinosaurier-Minispiel. Verwenden Sie die Sprungtaste oder drücken Sie die "
 "Leertaste, während das Spiel fokussiert ist."
 
-#: website/public/index.html:620
+#: website/public/index.html:621
 msgctxt "page:index.html"
 msgid "Copy dinosaur analysis prompt"
 msgstr "Aufforderung zur Dinosaurieranalyse kopieren"
 
-#: website/public/index.html:890
+#: website/public/index.html:891
 msgctxt "page:index.html"
 msgid "Choose the calculation"
 msgstr "Wählen Sie die Berechnung"
 
-#: website/public/index.html:844
+#: website/public/index.html:845
 msgctxt "page:index.html"
 msgid "Copy Calculator analysis prompt"
 msgstr "Aufforderung zur Analyse des Kopierrechners"
 
-#: website/public/index.html:1312
+#: website/public/index.html:1313
 msgctxt "page:index.html"
 msgid "Back to top"
 msgstr "Nach oben"
@@ -10946,7 +10952,8 @@ msgstr "Gleicher Abstand: 256 ÷ 16 = 16 Winkeleinheiten = 22,5°"
 #: website/public/guides/javascript/index.html:122
 #: website/public/guides/native/index.html:122
 #: website/public/guides/rl-environments/index.html:122
-#: website/public/index.html:124 website/public/showcase/aegis/index.html:123
+#: website/public/index.html:124 website/public/mcp/index.html:122
+#: website/public/showcase/aegis/index.html:123
 #: website/public/showcase/ctf/index.html:122
 #: website/public/showcase/dx-ball/index.html:122
 #: website/public/showcase/index.html:122
@@ -10969,7 +10976,8 @@ msgstr "Fallstudien"
 #: website/public/guides/javascript/index.html:123
 #: website/public/guides/native/index.html:123
 #: website/public/guides/rl-environments/index.html:123
-#: website/public/index.html:125 website/public/showcase/aegis/index.html:124
+#: website/public/index.html:125 website/public/mcp/index.html:123
+#: website/public/showcase/aegis/index.html:124
 #: website/public/showcase/ctf/index.html:123
 #: website/public/showcase/dx-ball/index.html:123
 #: website/public/showcase/index.html:123
@@ -10992,7 +11000,8 @@ msgstr "Blog"
 #: website/public/guides/javascript/index.html:121
 #: website/public/guides/native/index.html:121
 #: website/public/guides/rl-environments/index.html:121
-#: website/public/index.html:123 website/public/showcase/aegis/index.html:122
+#: website/public/index.html:123 website/public/mcp/index.html:121
+#: website/public/showcase/aegis/index.html:122
 #: website/public/showcase/ctf/index.html:121
 #: website/public/showcase/dx-ball/index.html:121
 #: website/public/showcase/index.html:121
@@ -11015,7 +11024,8 @@ msgstr "Erste Schritte"
 #: website/public/guides/javascript/index.html:124
 #: website/public/guides/native/index.html:124
 #: website/public/guides/rl-environments/index.html:124
-#: website/public/index.html:126 website/public/showcase/aegis/index.html:125
+#: website/public/index.html:126 website/public/mcp/index.html:124
+#: website/public/showcase/aegis/index.html:125
 #: website/public/showcase/ctf/index.html:124
 #: website/public/showcase/dx-ball/index.html:124
 #: website/public/showcase/index.html:124
@@ -11038,7 +11048,8 @@ msgstr "Anleitungen"
 #: website/public/guides/javascript/index.html:512
 #: website/public/guides/native/index.html:512
 #: website/public/guides/rl-environments/index.html:499
-#: website/public/index.html:1304 website/public/showcase/aegis/index.html:809
+#: website/public/index.html:1305 website/public/mcp/index.html:329
+#: website/public/showcase/aegis/index.html:809
 #: website/public/showcase/ctf/index.html:778
 #: website/public/showcase/dx-ball/index.html:786
 #: website/public/showcase/index.html:338
@@ -11061,7 +11072,8 @@ msgstr "Quellcode"
 #: website/public/guides/javascript/index.html:513
 #: website/public/guides/native/index.html:513
 #: website/public/guides/rl-environments/index.html:500
-#: website/public/index.html:1305 website/public/showcase/aegis/index.html:810
+#: website/public/index.html:1306 website/public/mcp/index.html:330
+#: website/public/showcase/aegis/index.html:810
 #: website/public/showcase/ctf/index.html:779
 #: website/public/showcase/dx-ball/index.html:787
 #: website/public/showcase/index.html:339
@@ -11084,7 +11096,8 @@ msgstr "MIT-Lizenz"
 #: website/public/guides/javascript/index.html:514
 #: website/public/guides/native/index.html:514
 #: website/public/guides/rl-environments/index.html:501
-#: website/public/index.html:1306 website/public/showcase/aegis/index.html:811
+#: website/public/index.html:1307 website/public/mcp/index.html:331
+#: website/public/showcase/aegis/index.html:811
 #: website/public/showcase/ctf/index.html:780
 #: website/public/showcase/dx-ball/index.html:788
 #: website/public/showcase/index.html:340
@@ -11107,7 +11120,8 @@ msgstr "Zur Community"
 #: website/public/guides/javascript/index.html:515
 #: website/public/guides/native/index.html:515
 #: website/public/guides/rl-environments/index.html:502
-#: website/public/index.html:1307 website/public/showcase/aegis/index.html:812
+#: website/public/index.html:1308 website/public/mcp/index.html:332
+#: website/public/showcase/aegis/index.html:812
 #: website/public/showcase/ctf/index.html:781
 #: website/public/showcase/dx-ball/index.html:789
 #: website/public/showcase/index.html:341
@@ -11214,27 +11228,27 @@ msgctxt "page:guides/native/index.html"
 msgid "Recovered C · excerpt"
 msgstr "Wiederhergestellter C · -Auszug"
 
-#: website/public/index.html:300 website/public/index.html:1054
+#: website/public/index.html:301 website/public/index.html:1055
 msgctxt "page:index.html"
 msgid "Showcases →"
 msgstr "Präsentieren →"
 
-#: website/public/index.html:783
+#: website/public/index.html:784
 msgctxt "page:index.html"
 msgid "Selected settings from the inspected script"
 msgstr "Ausgewählte Einstellungen aus dem überprüften Skript"
 
-#: website/public/index.html:958
+#: website/public/index.html:959
 msgctxt "page:index.html"
 msgid "Readable summary of the % handler"
 msgstr "Lesbare Zusammenfassung des % -Handlers"
 
-#: website/public/index.html:1002
+#: website/public/index.html:1003
 msgctxt "page:index.html"
 msgid "REA · selected original instructions"
 msgstr "REA * ausgewählte Originalanleitung"
 
-#: website/public/index.html:1013
+#: website/public/index.html:1014
 msgctxt "page:index.html"
 msgid "Operator IDs · Microsoft’s source"
 msgstr "Betreiber-IDs * Quelle von Microsoft"
@@ -11649,7 +11663,7 @@ msgstr ""
 #. {ph4}: </span >
 #. {ph5}: <span class="terminal-cursor" aria-hidden="true">
 #. {ph6}: </span>
-#: website/public/index.html:236
+#: website/public/index.html:237
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -11876,7 +11890,7 @@ msgstr ""
 #. {ph0}: <span translate="no">Node.js</span>
 #. {ph1}: <a href="get-started/">
 #. {ph2}: </a>
-#: website/public/index.html:285
+#: website/public/index.html:286
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -11893,7 +11907,7 @@ msgstr ""
 #. {ph4}: </span >
 #. {ph5}: <span class="terminal-cursor" aria-hidden="true">
 #. {ph6}: </span>
-#: website/public/index.html:548
+#: website/public/index.html:549
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -11904,7 +11918,7 @@ msgstr ""
 "{ph3} 220?{ph4}{ph5}{ph6}"
 
 #. {ph0}: <span translate="no">index.js</span>
-#: website/public/index.html:735
+#: website/public/index.html:736
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "REA · loaded {ph0} · selected lines"
@@ -11918,7 +11932,7 @@ msgstr "REA * geladen {ph0} * ausgewählte Linien"
 #. {ph5}: <span class="flow-note" >
 #. {ph6}: <code>ms-calculator:</code>
 #. {ph7}: </span >
-#: website/public/index.html:971
+#: website/public/index.html:972
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -13410,63 +13424,63 @@ msgstr ""
 
 #. {ph0}: <a href="#showcases">
 #. {ph1}: </a>
-#: website/public/index.html:331
+#: website/public/index.html:332
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Showcases{ph1}"
 msgstr "{ph0}Fallstudien{ph1}"
 
-#: website/public/index.html:1048
+#: website/public/index.html:1049
 msgctxt "page:index.html"
 msgid "REA case studies."
 msgstr "REA Fallstudien."
 
-#: website/public/index.html:1058
+#: website/public/index.html:1059
 msgctxt "page:index.html"
 msgid "Android · APK analysis"
 msgstr "Androide * APK Analyse"
 
-#: website/public/index.html:1059
+#: website/public/index.html:1060
 msgctxt "page:index.html"
 msgid "How an authenticator generates a login code"
 msgstr "Wie ein Authentifikator einen Anmeldecode generiert"
 
-#: website/public/index.html:1064
+#: website/public/index.html:1065
 msgctxt "page:index.html"
 msgid "Read the Android case study"
 msgstr "Lesen Sie die Android-Fallstudie"
 
-#: website/public/index.html:1069
+#: website/public/index.html:1070
 msgctxt "page:index.html"
 msgid "Electron · Feature tracing"
 msgstr "Electron * Merkmalsverfolgung"
 
-#: website/public/index.html:1070
+#: website/public/index.html:1071
 msgctxt "page:index.html"
 msgid "How Notion copies text and HTML"
 msgstr "Wie Notion Text und HTML kopiert"
 
-#: website/public/index.html:1075
+#: website/public/index.html:1076
 msgctxt "page:index.html"
 msgid "Read the Notion case study"
 msgstr "Lesen Sie die Notion-Fallstudie"
 
-#: website/public/index.html:1080
+#: website/public/index.html:1081
 msgctxt "page:index.html"
 msgid "Native · Reconstruction"
 msgstr "Einheimische * Rekonstruktion"
 
-#: website/public/index.html:1081
+#: website/public/index.html:1082
 msgctxt "page:index.html"
 msgid "DX-Ball's sound-pan calculation"
 msgstr "DX-BallS Berechnung der linken / rechten Klangposition"
 
-#: website/public/index.html:1086
+#: website/public/index.html:1087
 msgctxt "page:index.html"
 msgid "Read the DX-Ball case study"
 msgstr "Lesen Sie die DX-Ball-Fallstudie"
 
-#: website/public/index.html:265 website/public/index.html:266
+#: website/public/index.html:266 website/public/index.html:267
 msgctxt "page:index.html"
 msgid "Setup options"
 msgstr "Setup-Optionen"
@@ -14744,7 +14758,7 @@ msgstr ""
 "Prüfen Sie anschließend Ghidra und speichern Sie die Pfade für Ihren Client:"
 
 #. {ph0}: <span translate="no">200 + 10%</span>
-#: website/public/index.html:371
+#: website/public/index.html:372
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "Why does Calculator give 220 for {ph0}?"
@@ -14752,7 +14766,7 @@ msgstr "Warum ergibt {ph0} im Taschenrechner 220?"
 
 #. {ph0}: <a href="#what-is-re">
 #. {ph1}: </a>
-#: website/public/index.html:328
+#: website/public/index.html:329
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}How it works{ph1}"
@@ -14772,17 +14786,17 @@ msgctxt "page:index.html"
 msgid "Get started"
 msgstr "Erste Schritte"
 
-#: website/public/index.html:213
+#: website/public/index.html:214
 msgctxt "page:index.html"
 msgid "See an example ↓"
 msgstr "Ein Beispiel ansehen ↓"
 
-#: website/public/index.html:343
+#: website/public/index.html:344
 msgctxt "page:index.html"
 msgid "How it works"
 msgstr "So funktioniert es"
 
-#: website/public/index.html:345
+#: website/public/index.html:346
 msgctxt "page:index.html"
 msgid ""
 "Reverse engineering means learning how software works by inspecting the "
@@ -14793,44 +14807,44 @@ msgstr ""
 "selbst untersucht. Mit REA kann dein Agent dem Code folgen, eine Funktion "
 "erklären und dir helfen, sie nachzubauen."
 
-#: website/public/index.html:352
+#: website/public/index.html:353
 msgctxt "page:index.html"
 msgid "Ask about one feature"
 msgstr "Nach einer Funktion fragen"
 
-#: website/public/index.html:353
+#: website/public/index.html:354
 msgctxt "page:index.html"
 msgid "Give your agent a program or page and a question."
 msgstr "Gib deinem Agenten ein Programm oder eine Seite und eine Frage."
 
-#: website/public/index.html:356
+#: website/public/index.html:357
 msgctxt "page:index.html"
 msgid "Inspect the program"
 msgstr "Das Programm untersuchen"
 
-#: website/public/index.html:363
+#: website/public/index.html:364
 msgctxt "page:index.html"
 msgid "Explain it, then try a change"
 msgstr "Verstehen, dann etwas ändern"
 
-#: website/public/index.html:364
+#: website/public/index.html:365
 msgctxt "page:index.html"
 msgid "Your agent uses the findings to explain or rebuild the feature."
 msgstr ""
 "Dein Agent nutzt die Ergebnisse, um die Funktion zu erklären oder "
 "nachzubauen."
 
-#: website/public/index.html:380
+#: website/public/index.html:381
 msgctxt "page:index.html"
 msgid "Follow the instructions step by step"
 msgstr "Die Anweisungen Schritt für Schritt verfolgen"
 
-#: website/public/index.html:531
+#: website/public/index.html:532
 msgctxt "page:index.html"
 msgid "Ask your agent the same question"
 msgstr "Dem Agenten dieselbe Frage stellen"
 
-#: website/public/index.html:744
+#: website/public/index.html:745
 msgctxt "page:index.html"
 msgid ""
 "Start at 6. Add 0.001 each update without a collision, while speed is below "
@@ -14839,7 +14853,7 @@ msgstr ""
 "Beginnen Sie bei 6. Hinzufügen 0.001 jedes Update ohne Kollision, während "
 "die Geschwindigkeit darunter liegt 13."
 
-#: website/public/index.html:1049
+#: website/public/index.html:1050
 msgctxt "page:index.html"
 msgid ""
 "Explore a feature in a released app or game, with code and checked results."
@@ -14847,7 +14861,7 @@ msgstr ""
 "Entdecke eine Funktion in einer veröffentlichten App oder einem Spiel, mit "
 "Code und geprüften Ergebnissen."
 
-#: website/public/index.html:1060
+#: website/public/index.html:1061
 msgctxt "page:index.html"
 msgid ""
 "Trace Aegis's six-digit login code through its released APK, then move a "
@@ -14857,7 +14871,7 @@ msgstr ""
 "APK. Bewege dann die Demo-Uhr und sieh, warum er sich alle 30 Sekunden "
 "ändert."
 
-#: website/public/index.html:1071
+#: website/public/index.html:1072
 msgctxt "page:index.html"
 msgid ""
 "Follow Notion's packaged JavaScript to the system clipboard and see how a "
@@ -14866,7 +14880,7 @@ msgstr ""
 "Folge Notions gebündeltem JavaScript bis zur Systemzwischenablage und sieh, "
 "wie eine Kopie strukturierte Blockdaten bewahrt."
 
-#: website/public/index.html:1082
+#: website/public/index.html:1083
 msgctxt "page:index.html"
 msgid ""
 "Recover how a ball's position becomes left/right sound in a 1996 Windows "
@@ -14875,12 +14889,12 @@ msgstr ""
 "Rekonstruiere, wie die Ballposition in einem Windows-Spiel von 1996 zum "
 "linken oder rechten Ton wird."
 
-#: website/public/index.html:1178
+#: website/public/index.html:1179
 msgctxt "page:index.html"
 msgid "Choose your target."
 msgstr "Wähle dein Ziel."
 
-#: website/public/index.html:1179
+#: website/public/index.html:1180
 msgctxt "page:index.html"
 msgid ""
 "These guides cover setup and a first investigation for each kind of "
@@ -14891,7 +14905,7 @@ msgstr ""
 
 #. {ph0}: <a href="#calculator">
 #. {ph1}: </a>
-#: website/public/index.html:586
+#: website/public/index.html:587
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -14910,7 +14924,7 @@ msgstr ""
 #. {ph5}: <i>
 #. {ph6}: </i>
 #. {ph7}: </span >
-#: website/public/index.html:1213
+#: website/public/index.html:1214
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}{ph1}{ph2}{ph3}{ph4}{ph5}{ph6}{ph7}Example prompt · Website"
@@ -14918,7 +14932,7 @@ msgstr ""
 "{ph0}{ph1}{ph2}{ph3}{ph4}{ph5}{ph6}{ph7}Beispiel Eingabeaufforderung * "
 "Website"
 
-#: website/public/index.html:1236
+#: website/public/index.html:1237
 msgctxt "page:index.html"
 msgid "Yes, this one."
 msgstr "Ja, das hier."
@@ -14931,7 +14945,7 @@ msgstr "Ja, das hier."
 #. {ph5}: <i>
 #. {ph6}: </i>
 #. {ph7}: </span >
-#: website/public/index.html:1241
+#: website/public/index.html:1242
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -14946,7 +14960,7 @@ msgstr ""
 #. {ph3}: </span >
 #. {ph4}: <span class="terminal-cursor" aria-hidden="true">
 #. {ph5}: </span>
-#: website/public/index.html:1255
+#: website/public/index.html:1256
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -14960,18 +14974,18 @@ msgstr ""
 
 #. {ph0}: <a href="showcase/dx-ball/">
 #. {ph1}: </a>
-#: website/public/index.html:1264
+#: website/public/index.html:1265
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}See the DX-Ball case study →{ph1}"
 msgstr "{ph0}Siehe die Fallstudie DX-Ball →{ph1}"
 
-#: website/public/index.html:1218
+#: website/public/index.html:1219
 msgctxt "page:index.html"
 msgid "Copy website project prompt"
 msgstr "Aufforderung zum Kopieren des Website-Projekts"
 
-#: website/public/index.html:1246
+#: website/public/index.html:1247
 msgctxt "page:index.html"
 msgid "Copy game reconstruction prompt"
 msgstr "Aufforderung zur Wiederherstellung des Spiels kopieren"
@@ -14983,7 +14997,7 @@ msgstr "Aufforderung zur Wiederherstellung des Spiels kopieren"
 #. {ph4}: </span >
 #. {ph5}: <span class="terminal-cursor" aria-hidden="true">
 #. {ph6}: </span>
-#: website/public/index.html:1227
+#: website/public/index.html:1228
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -14993,12 +15007,12 @@ msgstr ""
 "{ph0}›{ph1}{ph2}Verwenden Sie REA zum Überprüfen {ph3}. Klonen Sie diese "
 "Website für mich.{ph4}{ph5}{ph6}"
 
-#: website/public/index.html:1208
+#: website/public/index.html:1209
 msgctxt "page:index.html"
 msgid "Try a larger project"
 msgstr "Ein größeres Projekt ausprobieren"
 
-#: website/public/index.html:598
+#: website/public/index.html:599
 msgctxt "page:index.html"
 msgid ""
 "Let’s try two examples: change a game’s speed, then rebuild Calculator’s % "
@@ -15007,7 +15021,7 @@ msgstr ""
 "Probieren wir zwei Beispiele: die Geschwindigkeit eines Spiels ändern und "
 "die %-Taste des Taschenrechners nachbauen."
 
-#: website/public/index.html:606
+#: website/public/index.html:607
 msgctxt "page:index.html"
 msgid ""
 "The game gets faster as you run. To rebuild it with a speed control, we "
@@ -15017,7 +15031,7 @@ msgstr ""
 "Geschwindigkeitssteuerung nachzubauen, müssen wir zuerst verstehen, wie sich"
 " die Geschwindigkeit ändert."
 
-#: website/public/index.html:612
+#: website/public/index.html:613
 msgctxt "page:index.html"
 msgid "1. Ask about the speed"
 msgstr "1. Nach der Geschwindigkeit fragen"
@@ -15030,7 +15044,7 @@ msgstr "1. Nach der Geschwindigkeit fragen"
 #. {ph5}: <i>
 #. {ph6}: </i>
 #. {ph7}: </span >
-#: website/public/index.html:615
+#: website/public/index.html:616
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -15038,12 +15052,12 @@ msgid ""
 msgstr ""
 "{ph0}{ph1}{ph2}{ph3}{ph4}{ph5}{ph6}{ph7}Beispielfrage · Dinosaurierspiel"
 
-#: website/public/index.html:638
+#: website/public/index.html:639
 msgctxt "page:index.html"
 msgid "2. Find the speed rule"
 msgstr "2. Die Geschwindigkeitsregel finden"
 
-#: website/public/index.html:639
+#: website/public/index.html:640
 msgctxt "page:index.html"
 msgid ""
 "REA lets the agent read the game’s running code. The speed starts at 6 and "
@@ -15053,12 +15067,12 @@ msgstr ""
 "beginnt bei 6 und steigt bei jeder Aktualisierung ein wenig, solange sie "
 "unter 13 liegt."
 
-#: website/public/index.html:646
+#: website/public/index.html:647
 msgctxt "page:index.html"
 msgid "3. Play the result"
 msgstr "3. Das Ergebnis spielen"
 
-#: website/public/index.html:647
+#: website/public/index.html:648
 msgctxt "page:index.html"
 msgid ""
 "We rebuilt that rule in the mini-game below and added a speed slider. Press "
@@ -15067,7 +15081,7 @@ msgstr ""
 "Wir haben diese Regel im Minispiel unten nachgebaut und einen "
 "Geschwindigkeitsregler ergänzt. Drücke Spielen und wähle dein Tempo."
 
-#: website/public/index.html:712
+#: website/public/index.html:713
 msgctxt "page:index.html"
 msgid ""
 "Enable JavaScript to play. You can still read the rule and open the source "
@@ -15076,7 +15090,7 @@ msgstr ""
 "Aktiviere JavaScript zum Spielen. Die Regel und den Quellcode unten kannst "
 "du weiterhin lesen."
 
-#: website/public/index.html:830
+#: website/public/index.html:831
 msgctxt "page:index.html"
 msgid ""
 "The % button does different things after + and ×. Let’s find both rules and "
@@ -15085,7 +15099,7 @@ msgstr ""
 "Die %-Taste verhält sich nach + und × unterschiedlich. Finden wir beide "
 "Regeln und probieren sie in einem kleinen Taschenrechner aus."
 
-#: website/public/index.html:836
+#: website/public/index.html:837
 msgctxt "page:index.html"
 msgid "1. Ask about the % button"
 msgstr "1. Nach der %-Taste fragen"
@@ -15098,19 +15112,19 @@ msgstr "1. Nach der %-Taste fragen"
 #. {ph5}: <i>
 #. {ph6}: </i>
 #. {ph7}: </span >
-#: website/public/index.html:839
+#: website/public/index.html:840
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}{ph1}{ph2}{ph3}{ph4}{ph5}{ph6}{ph7}Example question · Calculator"
 msgstr ""
 "{ph0}{ph1}{ph2}{ph3}{ph4}{ph5}{ph6}{ph7}Beispielfrage · Taschenrechner"
 
-#: website/public/index.html:862
+#: website/public/index.html:863
 msgctxt "page:index.html"
 msgid "2. Find both rules"
 msgstr "2. Beide Regeln finden"
 
-#: website/public/index.html:863
+#: website/public/index.html:864
 msgctxt "page:index.html"
 msgid ""
 "REA helps the agent read the code behind the % button. It applies two "
@@ -15119,19 +15133,19 @@ msgstr ""
 "REA hilft dem Agenten, den Code hinter der %-Taste zu lesen. Er wendet zwei "
 "unterschiedliche Regeln an:"
 
-#: website/public/index.html:884
+#: website/public/index.html:885
 msgctxt "page:index.html"
 msgid "3. Try the % button"
 msgstr "3. Die %-Taste ausprobieren"
 
-#: website/public/index.html:885
+#: website/public/index.html:886
 msgctxt "page:index.html"
 msgid "We recreated both rules below. Choose + or ×, press %, then press =."
 msgstr ""
 "Wir haben beide Regeln unten nachgebaut. Wähle + oder ×, drücke % und dann "
 "=."
 
-#: website/public/index.html:267
+#: website/public/index.html:268
 msgctxt "page:index.html"
 msgid "Setup for your platform:"
 msgstr "Einrichtung für deine Plattform:"
@@ -15139,7 +15153,7 @@ msgstr "Einrichtung für deine Plattform:"
 #. {ph0}: <a href="get-started/#curl-installation" >
 #. {ph1}: <span translate="no">curl</span>
 #. {ph2}: </a >
-#: website/public/index.html:278
+#: website/public/index.html:279
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "Other install options: {ph0}{ph1} →{ph2}"
@@ -15225,7 +15239,8 @@ msgstr ""
 #: website/public/guides/javascript/index.html:511
 #: website/public/guides/native/index.html:511
 #: website/public/guides/rl-environments/index.html:498
-#: website/public/index.html:1303 website/public/showcase/aegis/index.html:808
+#: website/public/index.html:1304 website/public/mcp/index.html:328
+#: website/public/showcase/aegis/index.html:808
 #: website/public/showcase/ctf/index.html:777
 #: website/public/showcase/dx-ball/index.html:785
 #: website/public/showcase/index.html:337
@@ -15789,18 +15804,18 @@ msgstr ""
 
 #. {ph0}: <a href="#rl-environments">
 #. {ph1}: </a>
-#: website/public/index.html:332
+#: website/public/index.html:333
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}RL environments{ph1}"
 msgstr "{ph0}RL-Umgebungen{ph1}"
 
-#: website/public/index.html:1098
+#: website/public/index.html:1099
 msgctxt "page:index.html"
 msgid "Build RL environments."
 msgstr "RL-Umgebungen erstellen"
 
-#: website/public/index.html:1099
+#: website/public/index.html:1100
 msgctxt "page:index.html"
 msgid ""
 "Turn a recorded web app session into a runnable environment for training and"
@@ -15813,7 +15828,7 @@ msgstr ""
 #. {ph1}: </a >
 #. {ph2}: <a href="https://x.com/reatools/status/2112574822584918075?s=20" >
 #. {ph3}: </a >
-#: website/public/index.html:1113
+#: website/public/index.html:1114
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Build an RL environment{ph1} · {ph2}Watch the demo on X{ph3}"
@@ -15910,7 +15925,7 @@ msgstr ""
 "{ph0}Anleitung zum Erstellen einer Umgebung{ph1} · {ph2}Demo auf X "
 "ansehen{ph3}"
 
-#: website/public/index.html:1124
+#: website/public/index.html:1125
 msgctxt "page:index.html"
 msgid "With REA set up in your agent, give it a task like this:"
 msgstr ""
@@ -15925,7 +15940,7 @@ msgstr ""
 #. {ph5}: </span >
 #. {ph6}: <span class="terminal-cursor" aria-hidden="true">
 #. {ph7}: </span>
-#: website/public/index.html:1140
+#: website/public/index.html:1141
 #, python-brace-format
 msgctxt "page:index.html"
 msgid ""
@@ -15941,37 +15956,37 @@ msgstr ""
 "Daten unverändert. Speichere sie in einem Ordner namens {ph4}, prüfe die "
 "verfügbaren Operationen und erkläre mir den Start.{ph5}{ph6}{ph7}"
 
-#: website/public/index.html:1152
+#: website/public/index.html:1153
 msgctxt "page:index.html"
 msgid "Example prompt. Replace the URL and folder tasks with your own."
 msgstr "Beispiel-Prompt. Ersetze URL und Ordneraufgaben durch deine eigenen."
 
-#: website/public/index.html:1131
+#: website/public/index.html:1132
 msgctxt "page:index.html"
 msgid "Copy example prompt"
 msgstr "Prompt kopieren"
 
-#: website/public/index.html:294
+#: website/public/index.html:295
 msgctxt "page:index.html"
 msgid "Build RL environments →"
 msgstr "RL-Umgebungen erstellen →"
 
-#: website/public/index.html:297
+#: website/public/index.html:298
 msgctxt "page:index.html"
 msgid "Record a web app for training and testing agents."
 msgstr "Zeichne eine Web-App zum Trainieren und Testen von Agenten auf."
 
-#: website/public/index.html:301
+#: website/public/index.html:302
 msgctxt "page:index.html"
 msgid "Investigations and interactive demos."
 msgstr "Untersuchungen und interaktive Demos."
 
-#: website/public/index.html:304
+#: website/public/index.html:305
 msgctxt "page:index.html"
 msgid "Blog →"
 msgstr "Blog →"
 
-#: website/public/index.html:305
+#: website/public/index.html:306
 msgctxt "page:index.html"
 msgid "Methods and reconstruction notes."
 msgstr "Methoden und Notizen zur Rekonstruktion."
@@ -16000,6 +16015,7 @@ msgstr "Methoden und Notizen zur Rekonstruktion."
 #: website/public/guides/rl-environments/index.html:83
 #: website/public/guides/rl-environments/index.html:96
 #: website/public/index.html:83 website/public/index.html:96
+#: website/public/mcp/index.html:83 website/public/mcp/index.html:96
 #: website/public/showcase/aegis/index.html:83
 #: website/public/showcase/aegis/index.html:96
 #: website/public/showcase/ctf/index.html:83
@@ -16019,7 +16035,7 @@ msgstr ""
 "REA - Finden Sie heraus, wie Software funktioniert. Reverse Engineering mit "
 "Ihrem Codierungsagenten."
 
-#: website/public/index.html:357
+#: website/public/index.html:358
 msgctxt "page:index.html"
 msgid ""
 "REA helps your agent read the code and see what the program does while it "
@@ -16028,7 +16044,7 @@ msgstr ""
 "REA hilft deinem Agenten, den Code zu lesen und zu untersuchen, was das "
 "Programm während der Ausführung macht."
 
-#: website/public/index.html:1104
+#: website/public/index.html:1105
 msgctxt "page:index.html"
 msgid ""
 "Your agent records the browser's requests and the app's responses. REA uses "
@@ -16039,7 +16055,7 @@ msgstr ""
 " REA erstellt daraus eine lokale Umgebung, in der Agenten Aufgaben üben "
 "können, ohne die ursprüngliche App auszuführen."
 
-#: website/public/index.html:1109
+#: website/public/index.html:1110
 msgctxt "page:index.html"
 msgid ""
 "To support folder deletion, the recording must show the folder before "
@@ -16049,14 +16065,14 @@ msgstr ""
 "Ordner vor dem Löschen zeigen und bestätigen, dass er danach nicht mehr "
 "vorhanden ist."
 
-#: website/public/index.html:1195
+#: website/public/index.html:1196
 msgctxt "page:index.html"
 msgid "Follow the code inside a JavaScript desktop app."
 msgstr "Verfolge den Code einer JavaScript-Desktop-App."
 
 #. {ph0}: <a href="faq/">
 #. {ph1}: </a>
-#: website/public/index.html:1277
+#: website/public/index.html:1278
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Read the FAQ{ph1} for setup help and common questions."
@@ -16066,7 +16082,7 @@ msgstr ""
 
 #. {ph0}: <a href="https://discord.gg/GkcryMnJDM">
 #. {ph1}: </a>
-#: website/public/index.html:1281
+#: website/public/index.html:1282
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "{ph0}Join Discord{ph1} to get help and discuss your investigations."
@@ -16076,7 +16092,7 @@ msgstr ""
 
 #. {ph0}: <a href="https://github.com/morluto/rea/issues/new/choose" >
 #. {ph1}: </a >
-#: website/public/index.html:1285
+#: website/public/index.html:1286
 #, python-brace-format
 msgctxt "page:index.html"
 msgid "Report a bug or request a feature in {ph0}GitHub issues{ph1}."
@@ -16087,7 +16103,7 @@ msgctxt "page:index.html"
 msgid "REA: Reverse Engineering for Your Coding Agent"
 msgstr "REA - Reverse Engineering für Ihr Codiermittel"
 
-#: website/public/index.html:370
+#: website/public/index.html:371
 msgctxt "page:index.html"
 msgid "See the full Calculator investigation"
 msgstr "Die vollständige Taschenrechner-Untersuchung ansehen"
@@ -16134,6 +16150,439 @@ msgid ""
 "{ph0}IDA{ph1} (Windows; macOS arm64 headless): use an existing IDA setup "
 "with an MCP registration. The macOS headless profile requires a source build"
 " or a release that includes it."
+msgstr ""
+
+#: website/public/mcp/index.html:111
+msgctxt "page:mcp/index.html"
+msgid "Skip to content"
+msgstr ""
+
+#. {ph0}: <span aria-hidden="true">
+#. {ph1}: </span>
+#: website/public/mcp/index.html:203
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "{ph0}✳{ph1} REA · Model Context Protocol"
+msgstr ""
+
+#: website/public/mcp/index.html:204
+msgctxt "page:mcp/index.html"
+msgid "Your agent can inspect how software works."
+msgstr ""
+
+#: website/public/mcp/index.html:205
+msgctxt "page:mcp/index.html"
+msgid ""
+"Connect REA to your coding agent and investigate apps, binaries, websites "
+"and captures with focused tools—and evidence you can inspect."
+msgstr ""
+
+#. {ph0}: <span aria-hidden="true">
+#. {ph1}: </span>
+#: website/public/mcp/index.html:210
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "Connect your agent {ph0}→{ph1}"
+msgstr ""
+
+#: website/public/mcp/index.html:211
+msgctxt "page:mcp/index.html"
+msgid "Explore the full setup guide"
+msgstr ""
+
+#. {ph0}: <span aria-hidden="true">
+#. {ph1}: </span>
+#: website/public/mcp/index.html:213
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid ""
+"{ph0}●{ph1} Runs locally · You choose the target · Evidence stays "
+"inspectable"
+msgstr ""
+
+#: website/public/mcp/index.html:216
+msgctxt "page:mcp/index.html"
+msgid "Investigation flow"
+msgstr ""
+
+#: website/public/mcp/index.html:216 website/public/mcp/index.html:287
+msgctxt "page:mcp/index.html"
+msgid "LOCAL"
+msgstr ""
+
+#. {ph0}: <strong>
+#. {ph1}: </strong>
+#. {ph2}: <small>
+#. {ph3}: </small>
+#: website/public/mcp/index.html:220
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "{ph0}Your agent{ph1}{ph2}Question · task · scope{ph3}"
+msgstr ""
+
+#: website/public/mcp/index.html:223
+msgctxt "page:mcp/index.html"
+msgid "tool call"
+msgstr ""
+
+#: website/public/mcp/index.html:225
+msgctxt "page:mcp/index.html"
+msgid "R"
+msgstr ""
+
+#. {ph0}: <strong>
+#. {ph1}: </strong>
+#. {ph2}: <small>
+#. {ph3}: </small>
+#: website/public/mcp/index.html:226
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "{ph0}REA MCP{ph1}{ph2}Analysis · evidence · trace{ph3}"
+msgstr ""
+
+#. {ph0}: <b>
+#. {ph1}: </b>
+#: website/public/mcp/index.html:231
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "{ph0}01{ph1} App"
+msgstr ""
+
+#. {ph0}: <b>
+#. {ph1}: </b>
+#: website/public/mcp/index.html:231
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "{ph0}02{ph1} Binary"
+msgstr ""
+
+#. {ph0}: <b>
+#. {ph1}: </b>
+#: website/public/mcp/index.html:231
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "{ph0}03{ph1} Browser"
+msgstr ""
+
+#: website/public/mcp/index.html:233
+msgctxt "page:mcp/index.html"
+msgid "evidence + provenance"
+msgstr ""
+
+#. {ph0}: <strong>
+#. {ph1}: </strong>
+#. {ph2}: <small>
+#. {ph3}: </small>
+#: website/public/mcp/index.html:234
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid ""
+"{ph0}Answer you can verify{ph1}{ph2}Findings linked to their source{ph3}"
+msgstr ""
+
+#: website/public/mcp/index.html:236
+msgctxt "page:mcp/index.html"
+msgid "A local tool connection—not a hosted analysis service."
+msgstr ""
+
+#: website/public/mcp/index.html:244
+msgctxt "page:mcp/index.html"
+msgid "A workbench for investigation"
+msgstr ""
+
+#: website/public/mcp/index.html:245
+msgctxt "page:mcp/index.html"
+msgid "Go from a question to useful evidence."
+msgstr ""
+
+#: website/public/mcp/index.html:246
+msgctxt "page:mcp/index.html"
+msgid ""
+"REA gives your agent focused ways to inspect a target, follow a behavior and"
+" check what the available evidence actually supports."
+msgstr ""
+
+#: website/public/mcp/index.html:251
+msgctxt "page:mcp/index.html"
+msgid "01 / INSPECT"
+msgstr ""
+
+#: website/public/mcp/index.html:252
+msgctxt "page:mcp/index.html"
+msgid "Start with the artifact"
+msgstr ""
+
+#: website/public/mcp/index.html:253
+msgctxt "page:mcp/index.html"
+msgid ""
+"Identify formats and inspect packaged apps, native binaries, managed code, "
+"JavaScript bundles, firmware and more."
+msgstr ""
+
+#. {ph0}: <span aria-hidden="true">
+#. {ph1}: </span>
+#: website/public/mcp/index.html:254
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "Browse analysis guides {ph0}↗{ph1}"
+msgstr ""
+
+#: website/public/mcp/index.html:258
+msgctxt "page:mcp/index.html"
+msgid "02 / TRACE"
+msgstr ""
+
+#: website/public/mcp/index.html:259
+msgctxt "page:mcp/index.html"
+msgid "Follow one real path"
+msgstr ""
+
+#: website/public/mcp/index.html:260
+msgctxt "page:mcp/index.html"
+msgid ""
+"Connect an observed input to the relevant handler and decision, using the "
+"analysis tools that fit the target."
+msgstr ""
+
+#. {ph0}: <span aria-hidden="true">
+#. {ph1}: </span>
+#: website/public/mcp/index.html:261
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "See investigations {ph0}↗{ph1}"
+msgstr ""
+
+#: website/public/mcp/index.html:265
+msgctxt "page:mcp/index.html"
+msgid "03 / VERIFY"
+msgstr ""
+
+#: website/public/mcp/index.html:266
+msgctxt "page:mcp/index.html"
+msgid "Keep evidence in view"
+msgstr ""
+
+#: website/public/mcp/index.html:267
+msgctxt "page:mcp/index.html"
+msgid ""
+"Separate observations from inferences and unknowns. Keep source identity, "
+"limits and provenance with the result."
+msgstr ""
+
+#. {ph0}: <span aria-hidden="true">
+#. {ph1}: </span>
+#: website/public/mcp/index.html:268
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "Try a guided investigation {ph0}↗{ph1}"
+msgstr ""
+
+#: website/public/mcp/index.html:277
+msgctxt "page:mcp/index.html"
+msgid "Get connected"
+msgstr ""
+
+#: website/public/mcp/index.html:278
+msgctxt "page:mcp/index.html"
+msgid "One setup. Your agent. Your workflow."
+msgstr ""
+
+#: website/public/mcp/index.html:279
+msgctxt "page:mcp/index.html"
+msgid ""
+"REA setup detects supported clients, shows the proposed configuration and "
+"asks before applying changes. It can install the matching investigation "
+"skill too."
+msgstr ""
+
+#: website/public/mcp/index.html:281
+msgctxt "page:mcp/index.html"
+msgid "Run setup"
+msgstr ""
+
+#: website/public/mcp/index.html:281
+msgctxt "page:mcp/index.html"
+msgid "Choose your agent and review its setup plan."
+msgstr ""
+
+#: website/public/mcp/index.html:282
+msgctxt "page:mcp/index.html"
+msgid "Approve the changes"
+msgstr ""
+
+#: website/public/mcp/index.html:282
+msgctxt "page:mcp/index.html"
+msgid "REA backs up existing configuration before updating it."
+msgstr ""
+
+#: website/public/mcp/index.html:283
+msgctxt "page:mcp/index.html"
+msgid "Restart and investigate"
+msgstr ""
+
+#: website/public/mcp/index.html:283
+msgctxt "page:mcp/index.html"
+msgid ""
+"Ask your agent to check its REA connection, then give it a scoped question."
+msgstr ""
+
+#. {ph0}: <strong>
+#. {ph1}: </strong>
+#. {ph2}: <small>
+#. {ph3}: </small>
+#: website/public/mcp/index.html:287
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "{ph0}Connect REA{ph1}{ph2}Run in your terminal{ph3}"
+msgstr ""
+
+#: website/public/mcp/index.html:289
+msgctxt "page:mcp/index.html"
+msgid "Terminal"
+msgstr ""
+
+#: website/public/mcp/index.html:289
+msgctxt "page:mcp/index.html"
+msgid "Copy"
+msgstr ""
+
+#. {ph0}: <a href="../get-started/#setup">
+#. {ph1}: </a>
+#: website/public/mcp/index.html:292
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid ""
+"Pick your agent in the setup menu. To target one client directly, see the "
+"{ph0}setup guide{ph1}."
+msgstr ""
+
+#: website/public/mcp/index.html:293
+msgctxt "page:mcp/index.html"
+msgid "Setup previews its changes and requires your approval."
+msgstr ""
+
+#: website/public/mcp/index.html:301
+msgctxt "page:mcp/index.html"
+msgid "Designed to keep you in control"
+msgstr ""
+
+#: website/public/mcp/index.html:302
+msgctxt "page:mcp/index.html"
+msgid "Your targets and your choices stay yours."
+msgstr ""
+
+#: website/public/mcp/index.html:305
+msgctxt "page:mcp/index.html"
+msgid "Local by design"
+msgstr ""
+
+#: website/public/mcp/index.html:305
+msgctxt "page:mcp/index.html"
+msgid ""
+"REA is a local tool. Your agent connects to the REA process configured on "
+"your machine, not a REA-hosted MCP endpoint."
+msgstr ""
+
+#: website/public/mcp/index.html:306
+msgctxt "page:mcp/index.html"
+msgid "You select the target"
+msgstr ""
+
+#: website/public/mcp/index.html:306
+msgctxt "page:mcp/index.html"
+msgid ""
+"Give REA a target and a question. Bring the tools and analysis engines your "
+"task requires."
+msgstr ""
+
+#: website/public/mcp/index.html:307
+msgctxt "page:mcp/index.html"
+msgid "Actions are not assumed"
+msgstr ""
+
+#: website/public/mcp/index.html:307
+msgctxt "page:mcp/index.html"
+msgid ""
+"Analysis is not the same as execution. Runtime tools have distinct effects; "
+"keep them within the scope you authorize."
+msgstr ""
+
+#: website/public/mcp/index.html:308
+msgctxt "page:mcp/index.html"
+msgid "Evidence stays traceable"
+msgstr ""
+
+#: website/public/mcp/index.html:308
+msgctxt "page:mcp/index.html"
+msgid ""
+"Keep source identities, tool outputs, limitations and unknowns available "
+"when you review an answer."
+msgstr ""
+
+#: website/public/mcp/index.html:310
+msgctxt "page:mcp/index.html"
+msgid ""
+"Native engines such as Hopper, Ghidra and IDA are bring-your-own. Setup does"
+" not install or upgrade Ghidra or IDA."
+msgstr ""
+
+#: website/public/mcp/index.html:316
+msgctxt "page:mcp/index.html"
+msgid "Ask a better question"
+msgstr ""
+
+#: website/public/mcp/index.html:316
+msgctxt "page:mcp/index.html"
+msgid "Give your agent a way to look closer."
+msgstr ""
+
+#: website/public/mcp/index.html:316
+msgctxt "page:mcp/index.html"
+msgid ""
+"Connect REA, choose an authorized target and start with one behavior you "
+"want to understand."
+msgstr ""
+
+#. {ph0}: <span aria-hidden="true">
+#. {ph1}: </span>
+#: website/public/mcp/index.html:317
+#, python-brace-format
+msgctxt "page:mcp/index.html"
+msgid "Set up REA {ph0}→{ph1}"
+msgstr ""
+
+#: website/public/mcp/index.html:6
+msgctxt "page:mcp/index.html"
+msgid "REA MCP — Reverse engineering tools for your AI agent"
+msgstr ""
+
+#: website/public/mcp/index.html:7
+msgctxt "page:mcp/index.html"
+msgid ""
+"Connect REA's local MCP server to your coding agent. Inspect apps, trace "
+"behavior and keep evidence close to every answer."
+msgstr ""
+
+#: website/public/mcp/index.html:215
+msgctxt "page:mcp/index.html"
+msgid ""
+"A coding agent calls REA tools, which inspect a selected target and return "
+"evidence to the agent."
+msgstr ""
+
+#: website/public/mcp/index.html:289
+msgctxt "page:mcp/index.html"
+msgid "Copy the REA setup command"
+msgstr ""
+
+#: website/public/mcp/index.html:337
+msgctxt "page:mcp/index.html"
+msgid "Back to top"
+msgstr ""
+
+#: website/public/index.html:213
+msgctxt "page:index.html"
+msgid "Connect an agent →"
 msgstr ""
 
 #, python-brace-format
