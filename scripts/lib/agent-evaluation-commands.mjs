@@ -73,10 +73,28 @@ export function createAgentEvaluationCommands({
     });
   }
 
+  let codexExecPrefixPromise;
+  const codexExecPrefix = () => {
+    codexExecPrefixPromise ??= execute(
+      codex,
+      ["--help"],
+      repositoryRoot,
+      evaluationEnvironment,
+      { timeoutMs: 10_000, diagnosticBytes: 8192 },
+      "Codex help probe timed out",
+    ).then((result) =>
+      result.exitCode === 0 && result.stdout.text.includes("--no-daemon")
+        ? ["--no-daemon"]
+        : [],
+    );
+    return codexExecPrefixPromise;
+  };
+
   return {
     async runCodex(prompt, approvedTools) {
+      const prefix = await codexExecPrefix();
       const arguments_ = [
-        "--no-daemon",
+        ...prefix,
         "exec",
         "--ephemeral",
         "--skip-git-repo-check",

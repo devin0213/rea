@@ -22,7 +22,9 @@ processTest.skipIf(process.platform === "win32")(
       `#!${process.execPath}
 import { spawn } from "node:child_process";
 import { writeFileSync } from "node:fs";
-if (process.env.FIXTURE_MODE === "success") {
+if (process.argv.includes("--help")) {
+  process.stdout.write("--no-daemon");
+} else if (process.env.FIXTURE_MODE === "success") {
   process.stdout.write(process.argv.includes("--version") ? "fixture 1.2\\n" : '{"type":"fixture","text":"你好"}\\n');
 } else if (process.env.FIXTURE_MODE === "failure") {
   process.stderr.write("synthetic command failure"); process.exitCode = 7;
